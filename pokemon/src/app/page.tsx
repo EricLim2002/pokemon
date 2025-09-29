@@ -1,6 +1,5 @@
 "use client";
 
-import { TIMEOUT } from "dns";
 import React, { useEffect, useState } from "react";
 
 interface Pokemon {
