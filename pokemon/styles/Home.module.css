@@ -1,0 +1,35 @@
+.middleContainer {
+  display: flex;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 16px auto;
+  align-items: flex-start;
+}
+
+.sideImage {
+  width: 160px;
+  position: sticky;
+  top: 16px;
+  height: fit-content;
+}
+
+.center {
+  flex: 1;
+  max-height: 600px;
+  overflow-y: auto; /* scrollable Pokemon list area */
+  padding: 12px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.searchBar {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding-bottom: 8px;
+  z-index: 2;
+}
+
+.pokemonList {
+  margin-top: 12px;
+}

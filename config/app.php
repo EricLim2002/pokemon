@@ -123,4 +123,21 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+
+    'aliases' => [
+        //deafult
+        'App' => Illuminate\Support\Facades\App::class,
+        'Request' => Illuminate\Http\Request::class,
+        'Session' => Illuminate\Support\Facades\Session::class,
+        'Http' => Illuminate\Support\Facades\Http::class,
+        'Route' => Illuminate\Support\Facades\Route::class,
+        'Pool' => Illuminate\Http\Client\Pool::class,
+
+        //library
+        'GeneralHelper' => App\Helper\GeneralHelper::class,
+
+
+        // controllers
+        'PokemonController' => App\Http\Controllers\PokemonController::class,
+    ]
 ];
