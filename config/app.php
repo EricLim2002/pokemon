@@ -139,5 +139,8 @@ return [
 
         // controllers
         'PokemonController' => App\Http\Controllers\PokemonController::class,
+
+        //Models
+        'apiRecord' => App\Models\ApiRecord::class
     ]
 ];

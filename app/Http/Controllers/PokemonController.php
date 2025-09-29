@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use Request;
+use Illuminate\Http\Request;
 use Pool;
 use Exception;
 use GeneralHelper;
@@ -19,21 +19,23 @@ class PokemonController extends Controller
             $limit = 20;
             $offset = Session::get('catelogue_index', 0);
 
-            if(isset($request->limit))
-            {
-                $limit = (int) $request->limit;
-                if($limit < 1) $limit = 1;
-                if($limit > 100) $limit = 100;
+            GeneralHelper::logging($request);
+            if (isset($request->limit)) {
+                $limit = $request->query('limit');
+                if ($limit < 1)
+                    $limit = 1;
+                if ($limit > 100)
+                    $limit = 100;
             }
-            if(isset($request->offset))
-            {
-                $offset = (int) $request->offset;
-                if($offset < 0) $offset = 0;
+            if (isset($request->offset)) {
+                $offset = $request->query('offset');
+                if ($offset < 0)
+                    $offset = 0;
             }
 
             Session::put('catelogue_index', $offset + $limit);
             $data = Http::get($this->baseUrl . 'pokemon?limit=' . $limit . '&offset=' . $offset);
-            $data = is_string ($data) ? json_decode($data)->json() : $data->json();
+            $data = is_string($data) ? json_decode($data)->json() : $data->json();
             $pokemons = $data['results'] ?? [];
 
             $pokeDetails = Http::pool(function ($pool) use ($pokemons) {
@@ -48,7 +50,8 @@ class PokemonController extends Controller
 
             foreach ($pokeDetails as $r) {
                 $r = $r->json();
-                if(!isset($r['name'])) continue;
+                if (!isset($r['name']))
+                    continue;
                 $name = $r['name'];
 
 
@@ -70,21 +73,21 @@ class PokemonController extends Controller
                     'weight' => $r['weight'] ?? null,
                 ];
             }
-
+            GeneralHelper::saveApiRecord($request, 'getPokemonList', true);
             return GeneralHelper::returnResponse($result);
 
         } catch (Exception $e) {
-
+            GeneralHelper::saveApiRecord($request, 'getPokemonList');
             return GeneralHelper::returnResponse([], 'Failed to fetch data', 500);
 
         }
     }
 
-    public function getPokemonDetails(Request $request,$id)
+    public function getPokemonDetails(Request $request, $id)
     {
         try {
-            
-            $url = $this->baseUrl . 'pokemon/' .$id;
+
+            $url = $this->baseUrl . 'pokemon/' . $id;
             $data = Http::get($url);
             $detail = $data->json();
             $name = $detail['name'] ?? null;
@@ -114,7 +117,7 @@ class PokemonController extends Controller
             return GeneralHelper::returnResponse($result);
 
         } catch (Exception $e) {
-
+            GeneralHelper::saveApiRecord($request, 'getPokemonDetails');
             return GeneralHelper::returnResponse([], 'Failed to fetch data', 500);
 
         }
@@ -129,6 +132,7 @@ class PokemonController extends Controller
 
             return $image;
         } catch (Exception $e) {
+            GeneralHelper::logging(new Request(), 0, 'PokemonController@getImage');
             return null;
         }
     }
