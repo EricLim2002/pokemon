@@ -33,25 +33,31 @@ Build a Pokédex app using the PokeAPI with a Laravel backend API for data aggre
   }
 ]
 ```
+
 ---
 
-📋 Prerequisites
+#📋 Prerequisites
 Before you begin, ensure your system has the following installed:
 
 Node.js: Version 18.18 or later .
 PHP & Composer: (Required for the Laravel backend. Please specify the version you are using).
 
-🚀 Getting Started
+#🚀 Getting Started
 Follow these steps to get the project running on your local machine.
 
-1. Clone the Repository
+---
+
+##1. Clone the Repository
 bash
 git clone https://github.com/EricLim2002/pokemon
 cd pokemon
+
+---
+
 2. Backend (Laravel) Setup
 Navigate to the backend directory: cd backend
 
-Install PHP dependencies:
+##Install PHP dependencies:
 
 bash
 composer install
@@ -73,7 +79,9 @@ bash
 php artisan serve
 The backend will be available at http://localhost:8000.
 
-3. Frontend (Next.js) Setup
+---
+
+##3. Frontend (Next.js) Setup
 Open a new terminal and navigate to the frontend directory: cd frontend
 
 Install JavaScript dependencies:
