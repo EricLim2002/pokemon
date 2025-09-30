@@ -87,12 +87,14 @@ php artisan serve
 
 - Create a .env.local file in the frontend root and add the necessary environment variables. For example, to point to your local backend:
 
--text
+- text
 - NEXT_PUBLIC_API_BASE_URL=http://localhost:8000/api
 - Run the Next.js development server (Turbopack is configured for fast refresh):
 
 
 ```bash
+cd pokemon
+
 npm install
 
 npm run dev
