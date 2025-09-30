@@ -42,6 +42,15 @@ Before you begin, ensure your system has the following installed:
 - Node.js: Version 22.18.0 or later.
 - PHP : 8.2.12.
 - Composer :  2.7.8.
+- Xampp
+- mysql :database
+
+#🔧 Database Setup – Summary
+
+✅ Steps You Must Do:
+
+-Create a local database manually. (default name : pokemon)
+
 
 # 🚀 Getting Started
 Follow these steps to get the project running on your local machine.
