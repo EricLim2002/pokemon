@@ -98,3 +98,7 @@ npm install
 npm run dev
 ```
 - The frontend will be available at http://localhost:3000
+
+# Postman
+- for postman testing, please download and import the postman json to your postman account from the project root directory.
+- [Postman](pokemon.postman_collection.json)
