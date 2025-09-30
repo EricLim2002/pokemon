@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "cd21ffe9-e11f-4ff7-a8d7-65888526b36e",
+		"name": "pokemon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34392425"
+	},
+	"item": [
+		{
+			"name": "listing",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/pokemons/?offset=20&limit=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"pokemons",
+						""
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "20"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/v1/pokemon/",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/pokemons?offset=20&limit=20",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"pokemons"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "20"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Sep 2025 14:01:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"bulbasaur\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png\",\n            \"types\": [\n                \"grass\",\n                \"poison\"\n            ],\n            \"height\": 7,\n            \"weight\": 69\n        },\n        {\n            \"id\": 2,\n            \"name\": \"ivysaur\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png\",\n            \"types\": [\n                \"grass\",\n                \"poison\"\n            ],\n            \"height\": 10,\n            \"weight\": 130\n        },\n        {\n            \"id\": 3,\n            \"name\": \"venusaur\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png\",\n            \"types\": [\n                \"grass\",\n                \"poison\"\n            ],\n            \"height\": 20,\n            \"weight\": 1000\n        },\n        {\n            \"id\": 5,\n            \"name\": \"charmander\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png\",\n            \"types\": [\n                \"fire\"\n            ],\n            \"height\": 6,\n            \"weight\": 85\n        },\n        {\n            \"id\": 6,\n            \"name\": \"charmeleon\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png\",\n            \"types\": [\n                \"fire\"\n            ],\n            \"height\": 11,\n            \"weight\": 190\n        },\n        {\n            \"id\": 7,\n            \"name\": \"charizard\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png\",\n            \"types\": [\n                \"fire\",\n                \"flying\"\n            ],\n            \"height\": 17,\n            \"weight\": 905\n        },\n        {\n            \"id\": 10,\n            \"name\": \"squirtle\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png\",\n            \"types\": [\n                \"water\"\n            ],\n            \"height\": 5,\n            \"weight\": 90\n        },\n        {\n            \"id\": 11,\n            \"name\": \"wartortle\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png\",\n            \"types\": [\n                \"water\"\n            ],\n            \"height\": 10,\n            \"weight\": 225\n        },\n        {\n            \"id\": 12,\n            \"name\": \"blastoise\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png\",\n            \"types\": [\n                \"water\"\n            ],\n            \"height\": 16,\n            \"weight\": 855\n        },\n        {\n            \"id\": 14,\n            \"name\": \"caterpie\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png\",\n            \"types\": [\n                \"bug\"\n            ],\n            \"height\": 3,\n            \"weight\": 29\n        },\n        {\n            \"id\": 15,\n            \"name\": \"metapod\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/11.png\",\n            \"types\": [\n                \"bug\"\n            ],\n            \"height\": 7,\n            \"weight\": 99\n        },\n        {\n            \"id\": 16,\n            \"name\": \"butterfree\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png\",\n            \"types\": [\n                \"bug\",\n                \"flying\"\n            ],\n            \"height\": 11,\n            \"weight\": 320\n        },\n        {\n            \"id\": 17,\n            \"name\": \"weedle\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png\",\n            \"types\": [\n                \"bug\",\n                \"poison\"\n            ],\n            \"height\": 3,\n            \"weight\": 32\n        },\n        {\n            \"id\": 18,\n            \"name\": \"kakuna\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png\",\n            \"types\": [\n                \"bug\",\n                \"poison\"\n            ],\n            \"height\": 6,\n            \"weight\": 100\n        },\n        {\n            \"id\": 19,\n            \"name\": \"beedrill\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png\",\n            \"types\": [\n                \"bug\",\n                \"poison\"\n            ],\n            \"height\": 10,\n            \"weight\": 295\n        },\n        {\n            \"id\": 21,\n            \"name\": \"pidgey\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png\",\n            \"types\": [\n                \"normal\",\n                \"flying\"\n            ],\n            \"height\": 3,\n            \"weight\": 18\n        },\n        {\n            \"id\": 22,\n            \"name\": \"pidgeotto\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png\",\n            \"types\": [\n                \"normal\",\n                \"flying\"\n            ],\n            \"height\": 11,\n            \"weight\": 300\n        },\n        {\n            \"id\": 23,\n            \"name\": \"pidgeot\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/18.png\",\n            \"types\": [\n                \"normal\",\n                \"flying\"\n            ],\n            \"height\": 15,\n            \"weight\": 395\n        },\n        {\n            \"id\": 25,\n            \"name\": \"rattata\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png\",\n            \"types\": [\n                \"normal\"\n            ],\n            \"height\": 3,\n            \"weight\": 35\n        },\n        {\n            \"id\": 27,\n            \"name\": \"raticate\",\n            \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png\",\n            \"types\": [\n                \"normal\"\n            ],\n            \"height\": 7,\n            \"weight\": 185\n        }\n    ],\n    \"message\": \"Success\",\n    \"status\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "details",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/pokemons/bulbasaur",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"pokemons",
+						"bulbasaur"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/pokemons/bulbasaur",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"pokemons",
+								"bulbasaur"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Sep 2025 04:07:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"bulbasaur\",\n        \"image\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png\",\n        \"types\": [\n            \"grass\",\n            \"poison\"\n        ],\n        \"height\": 7,\n        \"weight\": 69,\n        \"abilities\": [\n            \"overgrow\",\n            \"chlorophyll\"\n        ],\n        \"moves\": [\n            \"razor-wind\",\n            \"swords-dance\",\n            \"cut\",\n            \"bind\",\n            \"vine-whip\",\n            \"headbutt\",\n            \"tackle\",\n            \"body-slam\",\n            \"take-down\",\n            \"double-edge\",\n            \"growl\",\n            \"strength\",\n            \"mega-drain\",\n            \"leech-seed\",\n            \"growth\",\n            \"razor-leaf\",\n            \"solar-beam\",\n            \"poison-powder\",\n            \"sleep-powder\",\n            \"petal-dance\",\n            \"string-shot\",\n            \"toxic\",\n            \"rage\",\n            \"mimic\",\n            \"double-team\",\n            \"defense-curl\",\n            \"light-screen\",\n            \"reflect\",\n            \"bide\",\n            \"sludge\",\n            \"skull-bash\",\n            \"amnesia\",\n            \"flash\",\n            \"rest\",\n            \"substitute\",\n            \"snore\",\n            \"curse\",\n            \"protect\",\n            \"sludge-bomb\",\n            \"mud-slap\",\n            \"outrage\",\n            \"giga-drain\",\n            \"endure\",\n            \"charm\",\n            \"false-swipe\",\n            \"swagger\",\n            \"fury-cutter\",\n            \"attract\",\n            \"sleep-talk\",\n            \"return\",\n            \"frustration\",\n            \"safeguard\",\n            \"sweet-scent\",\n            \"synthesis\",\n            \"hidden-power\",\n            \"sunny-day\",\n            \"rock-smash\",\n            \"facade\",\n            \"nature-power\",\n            \"helping-hand\",\n            \"ingrain\",\n            \"knock-off\",\n            \"secret-power\",\n            \"weather-ball\",\n            \"grass-whistle\",\n            \"bullet-seed\",\n            \"magical-leaf\",\n            \"natural-gift\",\n            \"worry-seed\",\n            \"seed-bomb\",\n            \"energy-ball\",\n            \"leaf-storm\",\n            \"power-whip\",\n            \"captivate\",\n            \"grass-knot\",\n            \"venoshock\",\n            \"acid-spray\",\n            \"round\",\n            \"echoed-voice\",\n            \"grass-pledge\",\n            \"work-up\",\n            \"grassy-terrain\",\n            \"confide\",\n            \"grassy-glide\",\n            \"tera-blast\",\n            \"trailblaze\"\n        ]\n    },\n    \"message\": \"Success\",\n    \"status\": 200\n}"
+				}
+			]
+		}
+	]
+}
