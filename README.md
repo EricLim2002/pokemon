@@ -46,14 +46,15 @@ Composer :  2.7.8.
 # 🚀 Getting Started
 Follow these steps to get the project running on your local machine.
 
--
+
 
 ## 1. Clone the Repository
-bash
+```bash
 git clone https://github.com/EricLim2002/pokemon
 cd pokemon
+```
 
--
+
 
 ## 2. Backend (Laravel) Setup
 Navigate to the backend directory: cd backend
@@ -66,8 +67,8 @@ Run database migrations
 Start the Laravel development server:
 The backend will be available at http://localhost:8000.
 
-bash:
-```
+
+```bash
 composer install
 
 cp .env.example .env
@@ -78,7 +79,7 @@ php artisan migrate
 
 php artisan serve
 ```
--
+
 
 ## 3. Frontend (Next.js) Setup
 Open a new terminal and navigate to the frontend directory: cd frontend
@@ -92,10 +93,10 @@ text
 NEXT_PUBLIC_API_BASE_URL=http://localhost:8000/api
 Run the Next.js development server (Turbopack is configured for fast refresh):
 
-bash
 
-```
+```bash
 npm install
+
 npm run dev
 ```
 The frontend will be available at http://localhost:3000
