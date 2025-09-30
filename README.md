@@ -45,11 +45,8 @@ Before you begin, ensure your system has the following installed:
 - Xampp
 - mysql :database
 
-#🔧 Database Setup – Summary
-
-✅ Steps You Must Do:
-
--Create a local database manually. (default name : pokemon)
+# 🔧 Database Setup
+Create a local database manually. (default name : pokemon)
 
 
 # 🚀 Getting Started
