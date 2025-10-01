@@ -1,7 +1,7 @@
 # 🎮 Fullstack Pokédex
 
 ## Repo Layout
-- `/backend` — Laravel API
+- `root project directory` — Laravel API
 - `/pokemon` — Next.js frontend
 
 ## Goal
